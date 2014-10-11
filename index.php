@@ -2,12 +2,25 @@
 
 require_once 'config.php';
 
-$db = new DB();
+switch ($_GET['p']) 
+{
+	case 'home':
+		Page::writePage('homePage');
+		break;
 
-$team = new Team($db);
+	case 'insert':
+		Page::writePage('insertPage');
+		break;
 
-//print_r($team->team);
+	case 'team':
+		Page::writePage('teamPage');
+		break;
 
-//$db->insertTeam(1806,'SWAT',5,3,7,'Pretty good. Second place at KC.');
-
-Page::writePage('homePage');
+	case 'table':
+		Page::writePage('tablePage');
+		break;
+	
+	default:
+		Page::writePage('404');
+		break;
+}

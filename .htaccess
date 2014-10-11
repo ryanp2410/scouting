@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteBase /newscouting/
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^([A-Za-z]+)/([0-9]+)$ index.php?p=$1&number=$2 [NC,L]
+RewriteRule ^([A-Za-z]+)/$ index.php?p=$1 [NC,L]

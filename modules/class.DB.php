@@ -23,7 +23,13 @@ class DB
 	{
 		$this->getTeamByNumberStmt->execute([':teamNumber' => $number]);
 		$this->team = $this->getTeamByNumberStmt->fetch(PDO::FETCH_ASSOC);
-		return $this->team;
+		if(count($this->team))
+		{
+			return $this->team;
+		} else {
+			echo "There was an error.";
+		}
+
 	}
 
 	public function getTeamsByField($field = '`Recommend`')

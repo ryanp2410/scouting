@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Scouting</title>
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 </head>
 <body>
 	<div class="container">
@@ -17,11 +17,11 @@
 
 			<ul class="nav">
 
-				<li><a href="index.php">Home</a></li>
+				<li><a href="../home/">Home</a></li>
 
-				<li><a href="insert.php">Enter</a></li>
+				<li><a href="../insert/">Enter</a></li>
 
-				<li><a href="table.php">Table</a></li>
+				<li><a href="../table/">Table</a></li>
 
 			</ul>
 

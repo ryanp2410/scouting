@@ -6,22 +6,20 @@ $team = new Team($db);
 
 $details = $db->getTeamsByField();
 
-//print_r($details);
-
 ?>
 
 <table id="team">
 	<tr>
-		<td>Number</td>
-		<td>Name</td>
-		<td>Offense</td>
-		<td>Defense</td>
-		<td>Recommend</td>
-		<td>Notes</td>
+		<th>Number</th>
+		<th>Name</th>
+		<th>Offense</th>
+		<th>Defense</th>
+		<th>Recommend</th>
+		<th>Notes</th>
 	</tr>
 	<?php foreach($details as $team => $notes){?>
 		<tr>
-			<td><?='<a href="team.php?number=' . $notes['Number'] . '">'?><?=$notes['Number']?><?='</a>'?></td>
+			<td><?='<a href="../team/' . $notes['Number'] . '">'?><?=$notes['Number']?><?='</a>'?></td>
 			<td><?=$notes['Name']?></td>
 			<td><?=$notes['Offense']?></td>
 			<td><?=$notes['Defense']?></td>

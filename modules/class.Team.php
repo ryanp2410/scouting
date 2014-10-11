@@ -2,7 +2,7 @@
 
 class Team
 {
-	public $teamDetails;	/*, $number, $name, $offense, $defense, $notes*/
+	public $teamDetails, $number;	/* number, name, offense, defense, recommend, notes */
 
 	public function __construct(DB $db)
 	{
@@ -12,12 +12,11 @@ class Team
 		{
 			$this->number = $_GET['number'];
 			$this->teamDetails = $this->db->getTeamByNumber($this->number);
-			return $this->teamDetails;
 		}
 	}
 
 	public function getTeamDetails()
-	{
+	{	
 		return $this->teamDetails;
 	}
 }
